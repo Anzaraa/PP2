@@ -1,10 +1,23 @@
+
+
+"""
 #Task 1
 def grams_to_ounces(grams):
-    return grams * 0.0352739619
+    return grams * 28.3495231
+grams=float(input("Enter the gram: "))
+ounces=grams_to_ounces(grams)
+print(ounces) 
+
 
 #Task 2
 def fahrenheit_to_centigrade(fahrenheit):
     return (5 / 9) * (fahrenheit - 32)
+
+fahrenheit=float(input("Enter the temparature: "))
+celcius=fahrenheit_to_centigrade(fahrenheit)
+print(f"Temperature in Celcius is {celcius:.2f}")
+
+
 
 #Task 3
 def solve(numheads, numlegs):
@@ -13,6 +26,15 @@ def solve(numheads, numlegs):
         if (2 * chickens + 4 * rabbits) == numlegs:
             return chickens, rabbits
     return None, None
+
+numheads=45
+numlegs=116
+
+chickens, rabbits=solve(numheads, numlegs)
+print(f"Chickens -> {chickens} and rabbits -> {rabbits}")
+
+
+
 
 #Task 4
 def is_prime(n):
@@ -26,24 +48,48 @@ def is_prime(n):
 def filter_prime(numbers):
     return [num for num in numbers if is_prime(num)]
 
+n=list(map(int, input("List of numbers: ").split()))
+prime_numbers=filter_prime(n)
+print(prime_numbers)
+
+
+
+
 #Task 5
 from itertools import permutations
 
-def print_permutations(s):
-    perms = permutations(s)
+def print_permutations():
+    word=input("Enter word: ")
+    perms = permutations(word)
     for perm in perms:
-        print(''.join(perm))
+        print("".join(perm))
+
+print_permutations()
+
 
 #Task 6
 def reverse_sentence(sentence):
     return ' '.join(sentence.split()[::-1])
 
+sentence=str(input())
+reversed_sentence=reverse_sentence(sentence)
+print(reversed_sentence)
+
+"""
 #Task 7
 def has_33(nums):
     for i in range(len(nums) - 1):
         if nums[i] == 3 and nums[i + 1] == 3:
             return True
     return False
+
+nums = list(map(int, input("Enter numbers: ").split()))
+print(has_33(nums))
+
+
+
+
+
 
 #Task 8
 def spy_game(nums):
@@ -56,10 +102,25 @@ def spy_game(nums):
             return True
     return False
 
+numbers = list(map(int, input("Enter numbers: ").split()))
+print(spy_game(numbers))
+
+
+
+
+
 #Task 9
+import math
 def sphere_volume(radius):
     from math import pi
     return (4 / 3) * pi * radius**3
+
+sphere_radius = float(input())
+print(f"{sphere_volume(sphere_radius):.2f}")
+
+
+
+
 
 #Task 10
 def unique_list(lst):
@@ -68,16 +129,30 @@ def unique_list(lst):
         if item not in unique:
             unique.append(item)
     return unique
+elements = list(map(int, input("Enter: ").split()))
+print(unique_list(elements))
+
+
 
 #Task 11
 def is_palindrome(s):
     s = ''.join(filter(str.isalnum, s)).lower()
     return s == s[::-1]
 
+s = input("Enter: ")
+if is_palindrome(s):
+    print("Palindrome")
+else:
+    print("Not a Palindrome!")
+
+
 #Task 12
 def histogram(lst):
     for num in lst:
         print('*' * num)
+numbers = list(map(int, input("Enter: ").split()))
+histogram(numbers)
+
 
 #Task 13
 import random
@@ -101,8 +176,10 @@ def guess_the_number():
         else:
             print(f"Good job, {name}! You guessed my number in {guesses} guesses!")
             break
+guess_the_number()
 
-#Task 14
+#Task 14   
+"""
 if __name__ == "__main__":
     print(grams_to_ounces(100))  # Example usage
     print(fahrenheit_to_centigrade(98.6))
@@ -117,7 +194,7 @@ if __name__ == "__main__":
     print(is_palindrome("madam"))
     histogram([4, 9, 7])
 
-
+"""
     #Try to use this comments
     # Uncomment to play the game
     # guess_the_number()
