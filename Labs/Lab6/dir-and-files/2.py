@@ -13,7 +13,6 @@ def check_access(path):
     else:
         print("Path does not exist.")
 
-# Example: Replace with your actual path
 path_to_check = r"C:\Users\Huawei\Desktop\Lecture\Labs\Lab6\dir-and-files"
 
 check_access(path_to_check)

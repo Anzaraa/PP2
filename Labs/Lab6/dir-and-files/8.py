@@ -14,6 +14,6 @@ def delete_file(file_path):
     else:
         print(" File does not exist.")
 
-# Example: specify the file path
+
 file_to_delete = r"C:\Users\Huawei\Desktop\Lecture\Labs\Lab6\dir-and-files\copy.txt"
 delete_file(file_to_delete)

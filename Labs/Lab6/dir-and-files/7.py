@@ -14,7 +14,7 @@ def copy_file(source_path, destination_path):
     except Exception as e:
         print(f" An error occurred: {e}")
 
-# Example usage: specify source and destination paths
+
 source = r"C:\Users\Huawei\Desktop\Lecture\Labs\Lab6\dir-and-files\test.txt"
 destination = r"C:\Users\Huawei\Desktop\Lecture\Labs\Lab6\dir-and-files\copy.txt"
 

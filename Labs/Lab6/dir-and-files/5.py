@@ -8,9 +8,9 @@ def write_list_to_file(file_path, data_list):
     except Exception as e:
         print(f" Error writing to file: {e}")
 
-# Sample list
+
 my_list = ['Apple', 'Banana', 'Cherry', 'Orange']
 
-# Specify your output file path
+
 file_path = r"C:\Users\Huawei\Desktop\Lecture\Labs\Lab6\dir-and-files\output.txt"
 write_list_to_file(file_path, my_list)
